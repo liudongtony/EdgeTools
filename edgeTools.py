@@ -8,6 +8,7 @@ from flask import render_template
 from flask import request
 from flask import session
 from flask import url_for
+from flask import flash
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_script import Manager
@@ -36,6 +37,9 @@ class NameForm(Form):
 def index():
     form = NameForm()
     if form.validate_on_submit():
+        old_name = session.get('name')
+        if old_name is not None and old_name != form.name.data:
+            flash('Looks like you have changed your name!')
         session['name'] = form.name.data
         return redirect(url_for('index'))
     return render_template('index.html', current_time=datetime.utcnow(), form=form, name=session.get('name'))
@@ -86,9 +90,6 @@ def page_not_found(e):
 def internal_server_error(e):
     return render_template("500.html"), 500
 
-@app.route('/user/<name>')
-def user(name):
-    return '<h1>Hello %s</h1>' %name
 
 if __name__ == '__main__':
     manager.run()
