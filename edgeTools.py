@@ -1,28 +1,44 @@
-from flask import Flask
-from flask import request
-from flask import make_response
-from flask import redirect
-from flask import abort
-from flask import render_template
 from datetime import datetime
 
-from flask_script import Manager
+from flask import Flask
+from flask import abort
+from flask import make_response
+from flask import redirect
+from flask import render_template
+from flask import request
+from flask import session
+from flask import url_for
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_script import Manager
+from flask_wtf import Form
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
 
 import configs
 
 app = Flask(__name__)
 app.debug = True
+app.config['SECRET_KEY'] = 'This is a secret'
 
 
 manager = Manager(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 
-@app.route('/')
+
+class NameForm(Form):
+    name = StringField('What is your name?', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', current_time=datetime.utcnow())
+    form = NameForm()
+    if form.validate_on_submit():
+        session['name'] = form.name.data
+        return redirect(url_for('index'))
+    return render_template('index.html', current_time=datetime.utcnow(), form=form, name=session.get('name'))
 
 
 @app.route('/user/<name>')
