@@ -21,7 +21,7 @@ from flask_mail import Mail, Message
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
-import configs
+import config
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -145,7 +145,7 @@ def make_redirect():
 
 @app.route('/users/<id>')
 def find_user(id):
-    user = configs.users[id]
+    user = config.users[id]
     if not user:
         abort(404)
     return '<h1>Hello %s!</h1>' %user

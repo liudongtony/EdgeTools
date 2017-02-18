@@ -1,1 +1,0 @@
-users = {'1':'alex', '2':'burton', '3':'cathy'}
