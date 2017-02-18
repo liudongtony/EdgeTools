@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, session, redirect, url_for, current_app
+from flask import render_template, session, redirect, url_for, current_app, make_response
 
 from . import main
 from .forms import NameForm
@@ -25,3 +25,10 @@ def index():
         return redirect(url_for('.index'))
     return render_template('index.html', current_time=datetime.utcnow(), form=form, name=session.get('name'),
                            known=session.get('known', False))
+
+
+@main.route('/coo')
+def make_cookie():
+    response = make_response('<h1>This page carries a cookie.</h1>')
+    response.set_cookie('cookie_user', 'Tony')
+    return response

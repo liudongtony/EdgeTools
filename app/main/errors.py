@@ -1,3 +1,8 @@
+"""
+This is the centralized error handlers of the framework.
+main.errorhandler only applicable for main name space
+main.app_errorhandler for whole app
+"""
 from flask import render_template
 from . import main
 
