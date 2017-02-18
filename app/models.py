@@ -18,4 +18,4 @@ class User(db.Model):
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<User %r %r>' % self.username % self.role_id
