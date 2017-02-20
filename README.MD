@@ -19,5 +19,7 @@ db.session.add_all([user_role, user_john]) --> db.session.commit()
 
 5. unittest coverage: python manage.py test --coverage
 
+6. database migration: python manage.py db init  --> python manage.py db migrate -m 'xxx' -->python manage.py db upgrade
+
 
     
