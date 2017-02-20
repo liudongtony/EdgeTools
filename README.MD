@@ -21,5 +21,15 @@ db.session.add_all([user_role, user_john]) --> db.session.commit()
 
 6. database migration: python manage.py db init  --> python manage.py db migrate -m 'xxx' -->python manage.py db upgrade
 
+7. sqlite: sqlite3 data-dev.sqlite --> update users set username='Alexa' where id=4
+.schema users
+
+
+
+## Learn Flask
+{{ url_for('auth.reset_password_request') }} --> Find in views.py --> 
+@auth.route('/resetpassword', methods=['GET', 'POST'])
+def reset_password_request():
+
 
     
