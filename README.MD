@@ -3,6 +3,7 @@
 
 ## How to run
 1. Set environment argument
+export FLASKY_ADMIN="testofdong@gmail.com"
 
 2. setup virtual environment: pip install -r requirements.txt
 

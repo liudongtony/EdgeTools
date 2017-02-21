@@ -15,6 +15,7 @@ class Config:
     EDGETOOLS_MAIL_SUBJECT_PREFIX = '[EdgeTools]'
     EDGETOOLS_MAIL_SENDER = 'EdgeTools Admin <testofdong@gmail.com>'
     EDGETOOLS_ADMIN = os.environ.get('EDGETOOLS_ADMIN')
+    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
 
     @staticmethod
     def init_app(app):
@@ -49,6 +50,7 @@ config = {
     'production': ProdConfig,
     'default': DevConfig
 }
+
 
 
 users = {
