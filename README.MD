@@ -5,25 +5,24 @@ Learn from here: https://github.com/miguelgrinberg/flasky.git
 1. Set environment argument
 export FLASKY_ADMIN="testofdong@gmail.com"
 
-2. setup virtual environment: pip install -r requirements.txt
+2. setup virtual environment: pip freeze requirements.txt  --> pip install -r requirements.txt
 
 3. Start server for dev
 
     3.1 In Pycharm: Run -> Edit Configuration ... -> Script parameters: runserver --host 0.0.0.0
-    
     3.2 In terminal: python edgeTools.py runserver --host 0.0.0.0
 
 4. init db: python manage.py shell  --> from manage import db
---> db.drop_all() --> db.create_all() --> from app.models import Role, User
---> user_role = Role(name='User') --> user_john=User(username='john', role=user_role)
-db.session.add_all([user_role, user_john]) --> db.session.commit()
+--> db.drop_all() --> db.create_all() 
+
+insert 3 roles: --> Role.insert_roles()
+insert some fake data: python manage.py shell  --> User.generate_fake(10)  
+shell --> from app.models import Post --> Post.generate_fake(100)
 
 5. unittest coverage: python manage.py test --coverage
 
 6. database migration: python manage.py db init  --> python manage.py db migrate -m 'xxx' -->python manage.py db upgrade
 
-7. sqlite: sqlite3 data-dev.sqlite --> update users set username='Alexa' where id=4
-.schema users
 
 
 
