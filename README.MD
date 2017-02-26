@@ -25,6 +25,8 @@ shell --> from app.models import Post --> Post.generate_fake(100)
 
 7. Unittest: python manage.py test --coverage
 
+8. selenium: upgrade firefox --> download geckodriver (https://github.com/mozilla/geckodriver/releases) and copy to /usr/local/bin
+
 
 ## Learn Flask
 {{ url_for('auth.reset_password_request') }} --> Find in views.py --> 

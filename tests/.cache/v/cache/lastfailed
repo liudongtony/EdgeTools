@@ -1,3 +1,4 @@
 {
-  "test_client.py::FlaskClientTestCase::test_home_page": true
+  "test_client.py::FlaskClientTestCase::test_home_page": true, 
+  "test_client.py::FlaskClientTestCase::test_register_and_login": true
 }

@@ -1,18 +1,18 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import Required, Length, Email, DataRequired, Regexp, EqualTo
 from wtforms import ValidationError
 from ..models import User
 
 
-class LoginForm(Form):
+class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Keep me logged in')
     submit = SubmitField('Log in')
 
 
-class RegistrationForm(Form):
+class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     username = StringField('Username', validators=[DataRequired(), Length(1, 64),
                                                    Regexp('^[A-Za-z][A-Za-z0-9._]*$', 0,
@@ -32,7 +32,7 @@ class RegistrationForm(Form):
             raise ValidationError('Username already in use.')
 
 
-class ChangepasswordForm(Form):
+class ChangepasswordForm(FlaskForm):
     old_password = PasswordField('Old Password', validators=[DataRequired()])
     password = PasswordField('New password', validators=[
         DataRequired(), EqualTo('password2', message='Passwords must match.')])
@@ -40,12 +40,12 @@ class ChangepasswordForm(Form):
     submit = SubmitField('Change Password')
 
 
-class ResetpasswordRequestForm(Form):
+class ResetpasswordRequestForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     submit = SubmitField('Reset Password')
 
 
-class ResetpasswordForm(Form):
+class ResetpasswordForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     password = PasswordField('New Password', validators=[
         DataRequired(), EqualTo('password2', message='Passwords must match')])
@@ -57,7 +57,7 @@ class ResetpasswordForm(Form):
             raise ValidationError('Unknown email address.')
 
 
-class ChangeEmailForm(Form):
+class ChangeEmailForm(FlaskForm):
     email = StringField('New Email', validators=[Required(), Length(1, 64),
                                                  Email()])
     password = PasswordField('Password', validators=[Required()])
