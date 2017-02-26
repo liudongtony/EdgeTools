@@ -175,10 +175,10 @@ def unfollow(username):
     if user is None:
         flash('Invalid user.')
         return redirect(url_for('.index'))
-    if current_user.is_following(user):
+    if not current_user.is_following(user):
         flash('You are not following this user.')
         return redirect(url_for('.user', username=username))
-    current_user.unfollow(user)
+    current_user.un_follow(user)
     flash('You are not following %s.' % username)
     return redirect(url_for('.user', username=username))
 
@@ -260,9 +260,9 @@ def moderate():
 @main.route('/moderate/enable/<int:id>')
 @login_required
 @permission_required(Permission.MODERATE_COMMENTS)
-def moderate_enable():
+def moderate_enable(id):
     comment = Comment.query.get_or_404(id)
-    comment.disable = False
+    comment.disabled = False
     db.session.add(comment)
     return redirect(url_for('.moderate', page=request.args.get('page', 1, type=int)))
 
@@ -272,6 +272,6 @@ def moderate_enable():
 @permission_required(Permission.MODERATE_COMMENTS)
 def moderate_disable(id):
     comment = Comment.query.get_or_404(id)
-    comment.disable = True
+    comment.disabled = True
     db.session.add(comment)
     return redirect(url_for('.moderate', page=request.args.get('page', 1, type=int)))

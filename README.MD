@@ -5,7 +5,7 @@ Learn from here: https://github.com/miguelgrinberg/flasky.git
 1. Set environment argument
 export FLASKY_ADMIN="testofdong@gmail.com"
 
-2. setup virtual environment: pip freeze requirements.txt  --> pip install -r requirements.txt
+2. setup virtual environment: pip freeze requirements/dev.txt  --> pip install -r requirements/dev.txt
 
 3. Start server for dev
 
@@ -23,7 +23,7 @@ shell --> from app.models import Post --> Post.generate_fake(100)
 
 6. database migration: python manage.py db init  --> python manage.py db migrate -m 'xxx' -->python manage.py db upgrade
 
-
+7. Unittest: python manage.py test --coverage
 
 
 ## Learn Flask

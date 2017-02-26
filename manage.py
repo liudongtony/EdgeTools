@@ -1,16 +1,15 @@
 #!/usr/bin/env python
+from app import create_app, db
+from app.models import User, Role
+from flask_script import Manager, Shell
+from flask_migrate import Migrate, MigrateCommand
+
 import os
 COV = None
 if os.environ.get('FLASK_COVERAGE'):
     import coverage
     COV = coverage.coverage(branch=True, include='app/*')
     COV.start()
-
-
-from app import create_app, db
-from app.models import User, Role
-from flask_script import Manager, Shell
-from flask_migrate import Migrate, MigrateCommand
 
 
 app = create_app(os.getenv('EDGETOOLS_CONFIG') or 'default')

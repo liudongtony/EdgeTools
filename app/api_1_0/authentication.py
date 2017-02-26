@@ -33,6 +33,7 @@ def get_token():
     return jsonify({'token': g.current_user.generate_auth_token(
         expiration=3600), 'expiration': 3600})
 
+
 @auth.error_handler
 def auth_error():
     return unauthorized('Incalid credentials')
