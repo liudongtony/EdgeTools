@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ab178a7-325f-48a6-a0ad-5ca94630c3b4" name="Default" comment="Added Unittest.">
+    <list default="true" id="6ab178a7-325f-48a6-a0ad-5ca94630c3b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EdgeTools.iml" afterPath="$PROJECT_DIR$/.idea/EdgeTools.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.MD" afterPath="$PROJECT_DIR$/README.MD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/README" afterPath="$PROJECT_DIR$/migrations/README" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/script.py.mako" afterPath="$PROJECT_DIR$/migrations/script.py.mako" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements/common.txt" afterPath="$PROJECT_DIR$/requirements/common.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -771,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488077175130</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Updated readme, added how to run on CentOs.">
+      <created>1488407695410</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1488407695410</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -883,7 +885,8 @@
     <MESSAGE value="Added comment and moderate." />
     <MESSAGE value="Added API." />
     <MESSAGE value="Added Unittest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Unittest." />
+    <MESSAGE value="Updated readme, added how to run on CentOs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated readme, added how to run on CentOs." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
