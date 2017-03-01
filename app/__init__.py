@@ -23,6 +23,10 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
+    if not app.debug and not app.testing and notapp.config['SSL_DISABLE']:
+        from flask_sslify import SSLify
+        sslify = SSLify(app)
+
     # route and errors
     bootstrap.init_app(app)
     mail.init_app(app)

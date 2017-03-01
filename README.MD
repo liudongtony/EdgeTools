@@ -3,7 +3,7 @@ Learn from here: https://github.com/miguelgrinberg/flasky.git
 
 ## How to run
 1. Set environment argument
-export FLASKY_ADMIN="testofdong@gmail.com"
+export ET_ADMIN="testofdong@gmail.com"
 
 2. setup virtual environment: pip freeze requirements/dev.txt  --> pip install -r requirements/dev.txt
 
