@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ab178a7-325f-48a6-a0ad-5ca94630c3b4" name="Default" comment="Updated readme, added how to run on CentOs.&#10;Added gunicorn runs in Daemon mode.">
+    <list default="true" id="6ab178a7-325f-48a6-a0ad-5ca94630c3b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.MD" afterPath="$PROJECT_DIR$/README.MD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/README" afterPath="$PROJECT_DIR$/migrations/README" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/script.py.mako" afterPath="$PROJECT_DIR$/migrations/script.py.mako" />
     </list>
@@ -258,7 +257,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Flasky/flasky" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="wsgi.py&#9;FILE&#9;file://C:/Users/Dong/PycharmProjects/VENV/PycharmProjects/Lib/site-packages/werkzeug/wsgi.py&#10;wsgi&#9;null&#9;null" />
@@ -765,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488407701571</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Updated readme, added how to run on CentOs.&#10;Added gunicorn runs in Daemon mode.">
+      <created>1488418534941</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1488418534941</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -878,7 +884,8 @@
     <MESSAGE value="Added API." />
     <MESSAGE value="Added Unittest." />
     <MESSAGE value="Updated readme, added how to run on CentOs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated readme, added how to run on CentOs." />
+    <MESSAGE value="Updated readme, added how to run on CentOs.&#10;Added gunicorn runs in Daemon mode." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated readme, added how to run on CentOs.&#10;Added gunicorn runs in Daemon mode." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
