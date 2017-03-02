@@ -9,6 +9,7 @@ export FLASKY_ADMIN="testofdong@gmail.com"
 or on server
 CentOs upgrade Python: http://ruter.sundaystart.net/2015/12/03/Update-python/
 $ sudo yum install python-virtualenv --> virtualenv venv -->  $ source venv/bin/activate  --> (venv)../flasky $ deactivate
+Run gunicorn:  sudo gunicorn -b 0.0.0.0:80 manage:app -p gunicorn.pid -D  -->kill 'cat gunicorn.pid'
 
 3. Start server for dev
 
