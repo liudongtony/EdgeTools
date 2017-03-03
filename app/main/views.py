@@ -1,6 +1,7 @@
 from datetime import datetime
 from os import abort
 
+import requests
 from flask import flash
 from flask import render_template, session, redirect, url_for, current_app, make_response
 from flask import request
@@ -12,7 +13,6 @@ from . import main
 from .forms import NameForm, EditProfileForm, EditProfileAdminForm, PostForm, CommentForm
 from .. import db
 from ..models import User, Permission, Role, Post, Comment
-from ..email import send_email
 from ..decorators import permission_required, admin_required
 
 
@@ -66,8 +66,8 @@ def make_cookie():
 
 @main.route('/request-headers')
 def headers():
-    r = requests.get(geturl())
-    return render_template('request-headers.html', request=r)
+    r = requests.get('http://0.0.0.0:5000/request-headers')
+    return render_template('request-headers.html', requests=r)
 
 
 @main.route('/user/<username>')
