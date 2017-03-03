@@ -66,8 +66,8 @@ def make_cookie():
 
 @main.route('/request-headers')
 def headers():
-    r = requests.get('http://0.0.0.0:5000/request-headers')
-    return render_template('request-headers.html', requests=r)
+    header1 = request.headers.get('User-Agent')
+    return render_template('request-headers.html', requests=header1)
 
 
 @main.route('/user/<username>')
