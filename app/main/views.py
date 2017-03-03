@@ -60,8 +60,8 @@ def index():
 @main.route('/coo')
 def make_cookie():
     response = make_response('<h1>This page carries a cookie.</h1>')
-    cookies = response.set_cookie('cookie_user', 'Tony')
-    return render_template('cookies.html', cookies=cookies)
+    response.set_cookie('cookie_user', 'Tony')
+    return render_template('cookies.html', cookies=request.cookies.get('session'))
 
 
 @main.route('/user/<username>')
