@@ -64,6 +64,12 @@ def make_cookie():
     return render_template('cookies.html', cookies=request.cookies.get('session'))
 
 
+@main.route('/request-headers')
+def headers():
+    r = requests.get(geturl())
+    return render_template('request-headers.html', request=r)
+
+
 @main.route('/user/<username>')
 def user(username):
     user = User.query.filter_by(username=username).first()
