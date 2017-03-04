@@ -70,6 +70,12 @@ def headers():
     return render_template('request-headers.html', requests=header1)
 
 
+@main.route('/dlrs')
+def dlrs():
+    allDLRs = request.args.lists()
+    return render_template('dlrs.html', dlrs=allDLRs)
+
+
 @main.route('/user/<username>')
 def user(username):
     user = User.query.filter_by(username=username).first()
