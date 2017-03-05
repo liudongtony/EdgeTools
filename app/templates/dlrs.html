@@ -3,5 +3,8 @@
 {% block title %}EdgeTools - DLSr{% endblock %}
 
 {% block page_content %}
-<p>DLRs : {{ dlrs }}</p>
+<p>{{ dlrs }}</p>
+{% for key, value in dlrs.iteritems() %}
+<p> {{ key }} : {{ value }} </p>
+{% endfor %}
 {% endblock %}

@@ -72,7 +72,7 @@ def headers():
 
 @main.route('/dlrs')
 def dlrs():
-    allDLRs = request.args.lists()
+    allDLRs = request.args.to_dict()
     return render_template('dlrs.html', dlrs=allDLRs)
 
 
